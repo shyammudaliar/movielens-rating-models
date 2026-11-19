@@ -1,0 +1,9 @@
+[project]
+name = "movielens-rating-models"
+version = "0.1.0"
+description = "Comparing ways to predict movie ratings on MovieLens"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

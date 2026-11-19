@@ -1,0 +1,54 @@
+{
+  "split": "per_user_time",
+  "n_train": 70856,
+  "n_val": 15125,
+  "n_test": 14855,
+  "test_unseen_movie_share": 0.0826,
+  "test_unseen_user_share": 0.0,
+  "chosen": {
+    "bias_model": {
+      "lam_item": 3,
+      "lam_user": 5
+    },
+    "matrix_factorisation": {
+      "k": 20,
+      "reg": 0.1,
+      "lam_item": 3,
+      "lam_user": 5
+    },
+    "gradient_boosting": {
+      "max_depth": 6,
+      "max_iter": 400
+    }
+  },
+  "paired_comparisons": {
+    "movie_mean_minus_bias_model": {
+      "diff": 0.1323,
+      "ci": [
+        0.1243,
+        0.1408
+      ]
+    },
+    "matrix_factorisation_minus_bias_model": {
+      "diff": -0.0036,
+      "ci": [
+        -0.0078,
+        0.0004
+      ]
+    },
+    "gradient_boosting_minus_bias_model": {
+      "diff": -0.0185,
+      "ci": [
+        -0.022,
+        -0.0147
+      ]
+    }
+  },
+  "bucket_sizes": {
+    "unseen": 1227,
+    "1-4": 2458,
+    "5-19": 3861,
+    "20-99": 6067,
+    "100+": 1242
+  }
+}
